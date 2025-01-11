@@ -9,13 +9,13 @@ public class Stream {
 
 //        1) using on collection
 
-        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7);
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
 
         Stream<Integer> stream = list.stream();
 
 //        2) using Arrays as source
 
-        int[] arr = {1,2,3,4,5,6,7};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
 
         IntStream stream = Arrays.stream(arr);
 
@@ -32,4 +32,20 @@ public class Stream {
         Stream<Integer> iterate = Stream.iterate(0, i -> i + 1);
 //        Above iterate accepts seed as 0 means starting point and UnaryOperator is a function which have  same data type for input  and return
 
+
+//        NOTE:
+//        for string also you can create stream that is
+
+
+                String name = "rohan";
+                IntStream chars = name.chars();
+
+
+
+
+
+
+
+
 }
+
