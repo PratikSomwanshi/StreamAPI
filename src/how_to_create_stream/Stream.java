@@ -1,5 +1,7 @@
 package how_to_create_stream;
 
+import java.util.stream.IntStream;
+
 public class Stream {
 
 //        How to use stream
