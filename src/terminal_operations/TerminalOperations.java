@@ -1,8 +1,6 @@
 package terminal_operations;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TerminalOperations {
@@ -45,4 +43,25 @@ public class TerminalOperations {
     Optional<String> first = str.stream().findFirst();
 
     Optional<String> any = str.stream().findAny(); // thi will find any element from the list
+
+//    7) toArray()
+
+        Object[] arr = Stream.of(1,2,3,4,5,6).toArray();
+
+//    8) min/max
+
+    Optional<Integer> max = Stream.of(1,2,3,4).max(Comparator.naturalOrder());
+    Optional<Integer> min = Stream.of(1,2,3,4).min(Comparator.naturalOrder());
+
+//    9) flatMap
+
+    List<List<Integer>> lists = Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 6), Arrays.asList(7, 8, 9));
+
+
+    List<Integer> list = lists.stream().flatMap(Collection::stream).toList();
+
+    System.out.println(list); // [1,2,3,4,5,6,7,8,9]
+
+
+
 }
