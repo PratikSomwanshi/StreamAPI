@@ -32,4 +32,17 @@ public class Collector {
 
         System.out.println(collect4);
 
+    //        2) Partitioning
+
+//    do dunia banata hai jaise ki jo string 5 se badi hai vo true mai aur baki false mai
+
+    Map<Boolean, List<String>> collect = words.stream().collect(Collectors.partitioningBy(x -> x.length() > 5));
+//        System.out.println(collect);
+
+
+//        3) mapping
+
+    List<String> collect1 = words.stream().collect(Collectors.mapping(String::toLowerCase, Collectors.toList()));
+        System.out.println(collect1);
+
 }
